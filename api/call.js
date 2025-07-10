@@ -1,6 +1,7 @@
 let latestCall = null;
 let lastUpdated = null;
-const SECRET_TOKEN = "your_secure_token_here"; // Replace this with your own secret
+
+const SECRET_TOKEN = process.env.SECRET_TOKEN;
 
 export default async function handler(req, res) {
   const token = req.query.token || req.headers.authorization;
